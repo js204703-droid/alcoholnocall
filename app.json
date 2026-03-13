@@ -17,12 +17,7 @@
       ]
     },
     "plugins": [
-      [
-        "expo-contacts",
-        {
-          "contactsPermission": "연락처에 접근하여 번호를 보호합니다."
-        }
-      ],
+      ["expo-contacts", {"contactsPermission": "연락처에 접근하여 번호를 보호합니다."}],
       "expo-notifications"
     ]
   }
