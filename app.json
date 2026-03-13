@@ -1,0 +1,50 @@
+{
+  "name": "alcoholnocall",
+  "slug": "alcoholnocall",
+  "version": "1.0.0",
+  "orientation": "portrait",
+  "icon": "./assets/icon.png",
+  "userInterfaceStyle": "dark",
+  "splash": {
+    "image": "./assets/splash.png",
+    "resizeMode": "contain",
+    "backgroundColor": "#0D0D0D"
+  },
+  "android": {
+    "adaptiveIcon": {
+      "foregroundImage": "./assets/adaptive-icon.png",
+      "backgroundColor": "#0D0D0D"
+    },
+    "package": "com.acnc.alcoholnocall",
+    "permissions": [
+      "READ_CONTACTS",
+      "WRITE_CONTACTS",
+      "RECEIVE_BOOT_COMPLETED",
+      "VIBRATE"
+    ]
+  },
+  "plugins": [
+    [
+      "expo-contacts",
+      {
+        "contactsPermission": "연락처에 접근하여 번호를 보호합니다."
+      }
+    ],
+    "expo-notifications",
+    [
+      "react-native-google-mobile-ads",
+      {
+        "androidAppId": "ca-app-pub-6224399845260801~5420910963"
+      }
+    ]
+  ],
+  "dependencies": {
+    "expo": "~50.0.0",
+    "expo-contacts": "~12.6.0",
+    "expo-notifications": "~0.27.0",
+    "expo-status-bar": "~1.11.1",
+    "@react-native-async-storage/async-storage": "1.21.0",
+    "react": "18.2.0",
+    "react-native": "0.73.4"
+  }
+}
