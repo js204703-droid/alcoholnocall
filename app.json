@@ -19,6 +19,10 @@
     "plugins": [
       ["expo-contacts", {"contactsPermission": "연락처에 접근하여 번호를 보호합니다."}],
       "expo-notifications"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "a9729b77-73de-48be-83ae-7151453cd6b8"
+      }
+    }
   }
-}
