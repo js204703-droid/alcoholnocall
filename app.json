@@ -5,6 +5,10 @@
     "version": "2.0.0",
     "orientation": "portrait",
     "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E1A"
+    },
     "android": {
       "package": "com.acnc.alcoholnocall",
       "versionCode": 2,
