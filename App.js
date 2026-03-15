@@ -755,26 +755,30 @@ export default function App() {
   // 광고 보여주고 완료 후 콜백 실행
   const showAdThenCallback = async (callback) => {
     if (!InterstitialAd || !AdEventType) {
-      // AdMob 없으면 (Snack/개발환경) 더미 광고 화면 표시
+      // AdMob 없으면 더미 광고 - 3초 후 자동 닫힘
       setAdLoading(true);
-      Alert.alert(
-        '📺 광고',
-        '광고를 시청하고 있어요...\n(실제 빌드에서는 진짜 광고가 나와요)',
-        [{
-          text: '광고 완료!',
-          onPress: () => { setAdLoading(false); callback(); }
-        }]
-      );
+      setTimeout(() => {
+        setAdLoading(false);
+        callback();
+      }, 3000);
       return;
     }
 
     try {
       setAdLoading(true);
+
+      // 10초 안에 광고 안 뜨면 그냥 진행
+      const timeout = setTimeout(() => {
+        setAdLoading(false);
+        callback();
+      }, 10000);
+
       const ad = InterstitialAd.createForAdRequest(ADMOB_UNIT_ID, {
         requestNonPersonalizedAdsOnly: true,
       });
 
       ad.addAdEventListener(AdEventType.LOADED, () => {
+        clearTimeout(timeout);
         ad.show();
       });
 
