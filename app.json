@@ -13,8 +13,10 @@
     },
     "android": {
       "package": "com.acnc.alcoholnocall",
-      "versionCode": 3,
+      "versionCode": 4,
+      "compileSdkVersion": 35,
       "targetSdkVersion": 35,
+      "buildToolsVersion": "35.0.0",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#0A0E1A"
