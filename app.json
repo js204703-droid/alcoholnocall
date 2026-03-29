@@ -13,7 +13,7 @@
     },
     "android": {
       "package": "com.acnc.alcoholnocall",
-      "versionCode": 8,
+      "versionCode": 9,
       "compileSdkVersion": 35,
       "targetSdkVersion": 35,
       "buildToolsVersion": "35.0.0",
